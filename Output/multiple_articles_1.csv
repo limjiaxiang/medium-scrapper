@@ -1,0 +1,137 @@
+,title,author,published_date,published_time,content
+0,The History of the Ampersand,Jonny Gibson,2017-10-15,11:56:43,"These days everybody knows about the ampersand. It’s one of typography’s most unique and interesting characters. Its rise to hipster fame has catapulted the ampersand from the sketchbooks of type designers onto just about every printable surface you can imagine, the variations of which seem endless. From traditional representations all the way to hyper-stylised forms that bear little resemblance to the original mark. The varied nature of its form allows type designers a little creative freedom, and is often seen as an opportunity to inject some extra personality into a typeface. Officially classified as punctuation by todays unicode, it was in fact, once the 27th letter in the English alphabet existing as the graphical representation of the word ‘and’. Designers in all fields both love and hate the ampersand in equal measure, but very few know much about its history, or intended use, which is actually rather interesting. 
+ 
+A Brief History of The Glyph
+As with a lot of aspects of typography, the history of the ampersand begins with our triumphant and progressive friends, the Ancient Romans. As the Romans expanded their empire across the globe, many languages just absorbed this ligature into their own alphabet. However as these languages evolved, the connection between the original ligature and the word it now represents diminished beyond comprehension. The outcome was a rise in overly stylised versions, much less representative of its original form. In some of the traditional style typefaces of the modern age, the ampersand is more clearly representative of the original et ligature. Caslon is a great example of this, with many italic typeface variants also following suit. In contrast, many modern handwriting fonts use a variation of E and T such as the examples below. While this helps explain why this character exists, and why it looks the way it does, it doesn’t really explain where it gets its name? Where on earth did the term ampersand actually come from? 
+ 
+The Etymology
+Before deconstructing the word ampersand, you must first understand another latin legacy that made its way into our modern language. At the same time, and (the et-ligature &, now pronounced and) had become common place and was all but inducted into the English language as the 27th letter of the alphabet. It became so widely used that children in school, when reciting the alphabet, would include & after the letter Z. The result of this was that phonetically you would hear “X, Y, Z and per se and” indicating that the & stood by itself at the end of the alphabet. The phrase “and per se and” was inevitably slurred into one single term and by 1837, the term ampersand was well and truly immortalised in the English dictionary. 
+ 
+Correct Usage
+Over time, the ampersand would be de-classified within the English alphabet and its usage decreased as a result. While the & glyph still remains with its meaning unchanged, its use in modern english writing is somewhat frowned upon. It does however serve some interesting use cases adding a level of clarity where simply using and would not. For example: 
+ 
+Clarity within lists
+An ampersand adds clarity when items within a list require and as part of its name, rather than as a separator (e.g. “take your knife, pestle & mortar and ingredients”). 
+ 
+Accreditation
+When giving credit to writers in the film, screenplay or story world, an & indicates collaboration of a closer nature than and. Writing ‘McAndrew and Thorne’ implies that Thorne was involved in re-writing some of McAndrews script. McAndrew & Thorne represents a dual effort where both writers collaborated to write the script together. 
+ 
+Referencing
+Many educational institutions require the use of an & when citing sources of original work (e.g. ‘Gibson & Fellwinter, 1986’) So there you have it. The history of the worlds most famous character*. You may find that, like me, you will never be able to look at an & in the same way again. This is both a blessing and a curse. However, as with all cycles of fashion and trend, we are beginning to see a resurgence of the original et-ligature, replacing the modern & form. As more type designers become aware of the history of this expressive little glyph, the desire to re-introduce it has grown. Keep your eyes peeled and spread your new found knowledge. "
+1,In Defense of Papyrus: Your Guide for When to Use Despised Fonts,Keith A. Spencer,2017-10-04,17:41:50,"[Read Part II here.] As a typography enthusiast, I must object to this round dismissal of Papyrus.ttf. Every typeface has its time and its place — even Papyrus. Even Wingdings. Yes, even Comic Sans. Sure, that time and place might be on the signage for a preschool in a suburban Wisconsin strip mall. But though coastal elites deny it, that is, indeed, a real place. Hence, I’ve assembled a quick guide to much-loathed fonts accompanied by details as to what kinds of establishments may use them without being mocked. Break these rules at your own peril. 
+ 
+Amatic SC
+
+ 
+Lobster
+
+ 
+Fredericka the Great
+
+ 
+Hobo
+
+ 
+Pacifico
+
+ 
+Rosewood Std Regular
+
+ 
+Orbitron
+
+ 
+Blurfont
+
+ 
+Helvetica Neue
+
+ 
+Quantico
+
+ 
+Allstar Regular
+
+ 
+Satisfy
+
+ 
+American Typewriter
+
+ 
+Times New Roman
+
+ 
+Comic Sans
+"
+2,The Anatomy of a Thousand Typefaces,Florian Schulz,2017-10-22,12:37:29,"An attempt to building a font database with opentype.js
+On one hand, a limitation to system fonts, as seen in the video, can lead to a bad choice because there simply isn’t something better installed. On the other hand, web font libraries with hundreds or thousands of fonts can be quite overwhelming and lead to a paradox of choice. 
+ 
+Dinner for none: The font menu’s bitter taste
+The average font menu presents a list of available fonts, sorted by name, but completely unrelated otherwise: A typeface designed for bold headlines is followed by one designed for small user interfaces and then a fancy script typeface made for wedding invitations shows up. Now you either get trapped in a time consuming process of scrolling through the whole list from start to end or you simply decide to pick the first best match from the upper part of the list and call it a day. This is obviously not an interface made for systematic exploration — but infinite surprises. While I like to be surprised, I also like to influence my odds. 
+ 
+A systematic approach to finding typefaces
+There are various ways to limit the options. Before I dive into parsing font files, glyphs and metadata tables, let’s first have a look at classification, curated lists and then anatomy. 
+ 
+1. Classification
+Early in design school I’ve learned about the history of writing and practiced calligraphy to understand how writing evolved and how tools had an immediate impact on the design of type faces. Sometimes those subcategories are available as tags. But sometimes they just don’t exist in such detail. Maybe there are too many categories? Maybe users don’t understand all those options? Maybe there is just no complete and consistent data available? 
+ 
+2. Curated Lists
+
+ 
+3. Anatomy
+The most complex way to look at typefaces is to focus on their design details and to try to understand what makes a typeface good or special. Fortunately, there are books on type design, typefaces and typography. They can teach us how to make typefaces, how to choose them and how to use them. After looking at those 100 typefaces I thought: what about the rest? What about the fonts on my computer? And the ones on the web? What are their xheight, width, weight and contrast? How can I find out? 
+ 
+Inside a font file: Lack of meta data
+But the availability of this information depends on the work that has been put into making the font. While some fonts provide a lot of information, this isn’t always the case, especially not for free or open source fonts such as the ones from Google Fonts. But even if information is provided, it’s not necessarily consistent or complete enough to make comparisons based on it. 
+ 
+DIY: Parsing fonts with opentype.js
+So in order to classify and compare typefaces myself, I had to take a close look at font files and find automatic ways to extract information. Fonts are available in a variety of file formats, but eventually they are almost always available as TTF (TrueType Fonts). Other formats are OTF (OpenType) that includes information for additional features such as ligatures or WOFF (Web Open Font Format) that can compress the font and store additional meta data. 
+ 
+A database of characteristics
+
+ 
+Stroke contrast
+It’s a simple and comparable letter shape that almost always consists of two paths. It’s a good candidate for estimating the contrast of a typeface. (Side note: While seemingly simple, the shape of an “o” is actually quite hard to draw well, because the stroke needs to smoothly grow and shrink between thin and thick.) 
+ 
+x-height
+The x-height is an important characteristic that can be an indicator for legibility and perceived size of a font. It is usually measured at the top of a lowercase character „x“. In addition to the absolute measurement, it might be useful to also compare the x-height to the height of the ascenders. Thus, we can get percentage values such as “the x-height is 60% of the uppercase letters”. To make the values comparable (some fonts use 1000 unitsPerEm, others 2048 unitsPerEm), it is necessary to normalize the values and map them to a range of 0–1. 
+ 
+Width / Proportion
+With this value I try to grasp how narrow or wide a font is. Is it rather condensed or extended? One idea I had was to measure the width of an “M”. But to make those comparable, one would need to put those into context of the overall size or the x-height. Some typefaces also might have very special “M” glyphs that don’t represent the rest of the typeface. Another idea is to calculate the average glyph width using a sample word like “Hamburgefontsiv”. While this works quite well, it also would need some normalization in respect to the overall design and height of the typeface. Another approach is to look at the proportion of an “o”. This gives suprisingly good values for comparing the widths of fonts. 
+ 
+Weight
+To measure the weight, I render the lowercase „o“ character to a HTML canvas element, fill it black and paint the background white. I then measure the ratio between black and white pixels. A script or hairline font will show very little values, while a very heavy blocky font will show high values. This gave me okayish results, but I want to improve this by measuring actual stemps of glyphs in the future. 
+ 
+Spacing
+
+ 
+Similarity
+Once we have a table of values, we can normalize those and then compute distances to see how similar fonts are. I implemented a very basic version of it that isn’t terrible, but could be better with higher accuracy of the data. Also, we might perceive similarity different than an algorithm that treats every characteristic equally. In that case, we might need to weigh some properties more than others. 
+ 
+Demo
+I’ve built an interface to make the database accessible. Fonts can be viewed in a grid of varying size to get an overview over all fonts or to take a look at details of a few fonts. 
+ 
+Findings
+
+ 
+Summary
+This is a complex way of looking at font exploration. Ultimately, the quality of results depends on the quality of the fonts and the data around them. Only browsing Google Fonts is very limiting as their overall quality isn’t known to be the best in class. I’ve already started to run analysis on the Typekit library and ultimately met new challenges of user interface performance when previewing so many fonts. Such an undertaking requires proper caching and preloading strategies. But I don’t have to go that far just yet. With no AI involved, I now have a good understanding of what’s inside font files and what’s missing. The more and more I got into this, I realized how massive the field of font technology is and that I’m only getting into something that’s been done for decades already. 
+ 
+Possibilities
+With such a dataset, one could do more things: Before I publish the raw dataset I want to improve the analysis and try to add more characteristics. If you have any ideas for improvement, don’t hesitate to leave a comment. Thanks for reading! 
+ 
+Appendix
+"
+3,What You’re Worth,Kris Gage,2017-10-16,12:46:49,"Everything. But only if you think so.
+
+ 
+Invest in your appreciating assets
+Put time and attention and energy into things that compound and grow over time. Like knowledge. Do not invest in depreciating assets. Do not dump energy and attention into things that lose value over time. Like looks. 
+ 
+Invest in high ROI
+Chase the things that have the biggest impact for your time attention. Do not dump energy into the “long tail,” where each incremental effort has far less impact. Don’t dedicate your life to “perfection.” Where “time” can also mean “effort,” here’s what chasing the long-tail of perfection looks: 
+ 
+Invest in growing positive, not fixing negative
+If something’s hemorrhaging, sure, fix it. But other than that, focus on strengths, gifts, and talents — not weaknesses and flaws. Look at yourself with love, not resentment or loathing. Acknowledge your work — and work more. Appreciate yourself — rather than taking yourself for granted. Don’t compare yourself to others. Celebrate others’ successes, and recognize that everyone is on their own journey. Life isn’t a fight or an exhausting competition — that there is enough of everything and for everyone, including ourselves. Accept praise and compliments from others. Don’t put yourself down. Don’t expect others to make you happy, fulfill needs, and keep your cup full of love, care, and attention. You don’t need a partner to feel valued, cherished, wanted, and loved. Our happiness is my responsibility and every else is a bonus. We are not here to blame anyone for anything. We are not victims of our own lives. It is never too late to step into our power and feel worthy of the best things life has to offer: good health, love, and abundance. When we value ourselves, others value us as well. We can do our best work when we do it from a place of authenticity and power — not disempowered. "
+4,Challenge Dirty 30: NBA Player Comparisons,Allan Aguirre,2017-10-17,15:14:49,"Tonight is both Challenge night and the opening day of the NBA season. Literally my two passions put into one night. I write this the night before with full knowledge that I have two exams in the morning, yet my excitement for both the Challenge and NBA cannot be contained. With the debut of each, I will be breaking down which remaining Challenge Dirty 30 competitor has the most similar story-lines to current NBA players in 2017. Johnny Bananas & Stephen Curry Both are players with gigantic cult followings who believe in them. The rest of the world cheers against them. Curry and Bananas were both good players who seemingly became the best players in the league one day out of nowhere. I don’t know how it happened, it just did. Kailah Casillas & John Wall Both are still somewhat new, young and exciting players who want to jump into the elite level of players. Yet, they are still looking on the outside, both maybe rely too much on their athleticism, and are cocky as hell. CT & LeBron James All time great competitors. Each would be known as the greatest of all time with more championships. Both required forming a super team to finally win a title — Lebron & Wade and CT & Wes. The two men frighten me with their physical capabilities. Tori Deal & Karl Anthony Towns Two young players who have dazzled people with their early performances. Except each has major flaws (Town’s rim protection and Tori’s boyfriends). Are they as good as their hype? Jordan Wiseley & Kevin Durant Freakish athletes who showed a ton of promise from day one. They went from good guys to villains, and eventually joined the dark side (the Warriors and Johnny Bananas). He took the easy route instead of the fun route. Honorable Mention: Gerald Green (doesn’t have five fingers on one hand). Camila Nakagawa & Donald Sterling Racists who got banned from their respective leagues. Derrick Kosinski & Jimmy Butler I have to give Derrick a former Chicago Bulls player as his comparison. Derrick lacks size similar to Jimmy lacks a consistent jump shoot. Regardless, they try 110% at all times to prove they are elite competitors. Formerly in the shadows of bigger names, and proved to be some of the best in the game themselves. Derrick gets a new look as a dad, and Butler gets a new look on the Timberwolves. Jenna Compono & DeMar DeRozan Players who vacillate between completely overrated and completely underrated, generally finding a middle ground of being overrated by casual fans of the franchises. DeMar’s dunks were what people got excited about him initially, similar to Jenna’s butt. They each went on to be surprising All Star players, and are still stars despite their major flaws. Hunter Barfield & Zach LaVine It is questionable whether they are big thinkers. These people rely solely on their strength and athleticism. Sadly, Hunter and Zach are both a bit injured right now. Wishing them both a swift recovery. Veronica Portillo & Tony Parker Neither are in their primes. Except they both deserve a ton of respect. In a sea of young players, Tony and Veronica have multiple championships and have been top players before. To top it off, they have both had amazing hookups throughout their career. Parker used to be married to Eva Longoria. LeRoy Garrett & DeAndre Jordan Chill dudes. DeAndre grabs rebounds and dunks balls like LeRoy wins eliminations and beats people with his raw size. They play with elite guys, and find themselves a threat to the elite, just under elite themselves. Britni Thornton & Jrue Holiday Are they good? Or are they only better than the worst? At the very least, they are likable and caring people. Tony Raines & Kelly Oubre Again, it’s questionable whether either of these young players are good. Both have these flashes of awesome, and then become complete shit. Kelly has been called the prettiest guy in the NBA, and Tony is a lady killer too. "

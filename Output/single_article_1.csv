@@ -1,0 +1,60 @@
+,title,author,published_date,published_time,content
+0,The Anatomy of a Thousand Typefaces,Florian Schulz,2017-10-22,12:37:29,"An attempt to building a font database with opentype.js
+On one hand, a limitation to system fonts, as seen in the video, can lead to a bad choice because there simply isn’t something better installed. On the other hand, web font libraries with hundreds or thousands of fonts can be quite overwhelming and lead to a paradox of choice. 
+ 
+Dinner for none: The font menu’s bitter taste
+The average font menu presents a list of available fonts, sorted by name, but completely unrelated otherwise: A typeface designed for bold headlines is followed by one designed for small user interfaces and then a fancy script typeface made for wedding invitations shows up. Now you either get trapped in a time consuming process of scrolling through the whole list from start to end or you simply decide to pick the first best match from the upper part of the list and call it a day. This is obviously not an interface made for systematic exploration — but infinite surprises. While I like to be surprised, I also like to influence my odds. 
+ 
+A systematic approach to finding typefaces
+There are various ways to limit the options. Before I dive into parsing font files, glyphs and metadata tables, let’s first have a look at classification, curated lists and then anatomy. 
+ 
+1. Classification
+Early in design school I’ve learned about the history of writing and practiced calligraphy to understand how writing evolved and how tools had an immediate impact on the design of type faces. Sometimes those subcategories are available as tags. But sometimes they just don’t exist in such detail. Maybe there are too many categories? Maybe users don’t understand all those options? Maybe there is just no complete and consistent data available? 
+ 
+2. Curated Lists
+
+ 
+3. Anatomy
+The most complex way to look at typefaces is to focus on their design details and to try to understand what makes a typeface good or special. Fortunately, there are books on type design, typefaces and typography. They can teach us how to make typefaces, how to choose them and how to use them. After looking at those 100 typefaces I thought: what about the rest? What about the fonts on my computer? And the ones on the web? What are their xheight, width, weight and contrast? How can I find out? 
+ 
+Inside a font file: Lack of meta data
+But the availability of this information depends on the work that has been put into making the font. While some fonts provide a lot of information, this isn’t always the case, especially not for free or open source fonts such as the ones from Google Fonts. But even if information is provided, it’s not necessarily consistent or complete enough to make comparisons based on it. 
+ 
+DIY: Parsing fonts with opentype.js
+So in order to classify and compare typefaces myself, I had to take a close look at font files and find automatic ways to extract information. Fonts are available in a variety of file formats, but eventually they are almost always available as TTF (TrueType Fonts). Other formats are OTF (OpenType) that includes information for additional features such as ligatures or WOFF (Web Open Font Format) that can compress the font and store additional meta data. 
+ 
+A database of characteristics
+
+ 
+Stroke contrast
+It’s a simple and comparable letter shape that almost always consists of two paths. It’s a good candidate for estimating the contrast of a typeface. (Side note: While seemingly simple, the shape of an “o” is actually quite hard to draw well, because the stroke needs to smoothly grow and shrink between thin and thick.) 
+ 
+x-height
+The x-height is an important characteristic that can be an indicator for legibility and perceived size of a font. It is usually measured at the top of a lowercase character „x“. In addition to the absolute measurement, it might be useful to also compare the x-height to the height of the ascenders. Thus, we can get percentage values such as “the x-height is 60% of the uppercase letters”. To make the values comparable (some fonts use 1000 unitsPerEm, others 2048 unitsPerEm), it is necessary to normalize the values and map them to a range of 0–1. 
+ 
+Width / Proportion
+With this value I try to grasp how narrow or wide a font is. Is it rather condensed or extended? One idea I had was to measure the width of an “M”. But to make those comparable, one would need to put those into context of the overall size or the x-height. Some typefaces also might have very special “M” glyphs that don’t represent the rest of the typeface. Another idea is to calculate the average glyph width using a sample word like “Hamburgefontsiv”. While this works quite well, it also would need some normalization in respect to the overall design and height of the typeface. Another approach is to look at the proportion of an “o”. This gives suprisingly good values for comparing the widths of fonts. 
+ 
+Weight
+To measure the weight, I render the lowercase „o“ character to a HTML canvas element, fill it black and paint the background white. I then measure the ratio between black and white pixels. A script or hairline font will show very little values, while a very heavy blocky font will show high values. This gave me okayish results, but I want to improve this by measuring actual stemps of glyphs in the future. 
+ 
+Spacing
+
+ 
+Similarity
+Once we have a table of values, we can normalize those and then compute distances to see how similar fonts are. I implemented a very basic version of it that isn’t terrible, but could be better with higher accuracy of the data. Also, we might perceive similarity different than an algorithm that treats every characteristic equally. In that case, we might need to weigh some properties more than others. 
+ 
+Demo
+I’ve built an interface to make the database accessible. Fonts can be viewed in a grid of varying size to get an overview over all fonts or to take a look at details of a few fonts. 
+ 
+Findings
+
+ 
+Summary
+This is a complex way of looking at font exploration. Ultimately, the quality of results depends on the quality of the fonts and the data around them. Only browsing Google Fonts is very limiting as their overall quality isn’t known to be the best in class. I’ve already started to run analysis on the Typekit library and ultimately met new challenges of user interface performance when previewing so many fonts. Such an undertaking requires proper caching and preloading strategies. But I don’t have to go that far just yet. With no AI involved, I now have a good understanding of what’s inside font files and what’s missing. The more and more I got into this, I realized how massive the field of font technology is and that I’m only getting into something that’s been done for decades already. 
+ 
+Possibilities
+With such a dataset, one could do more things: Before I publish the raw dataset I want to improve the analysis and try to add more characteristics. If you have any ideas for improvement, don’t hesitate to leave a comment. Thanks for reading! 
+ 
+Appendix
+"
